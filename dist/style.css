@@ -3,3 +3,8 @@
 *::after {
 	box-sizing: border-box;
 }
+
+#currentWeather {
+	height: 20rem;
+	aspect-ratio: 1;
+}

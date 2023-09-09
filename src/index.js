@@ -12,7 +12,7 @@ function displayGIF() {
 	API.Weather.getForecast(loc).then((response) => {
 		const searchTerm = response.current.condition.text;
 		API.GIF(searchTerm).then((response) => {
-			img.src = response.data.images.original.url;
+			img.src = response.data.images.fixed_height.url;
 		});
 	});
 }

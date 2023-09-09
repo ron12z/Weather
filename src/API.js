@@ -22,7 +22,7 @@ const Weather = (() => {
 const GIF = async (searchTerm) => {
 	// https://developers.giphy.com/explorer/
 	const key = "gaJlvjZzik3lhG0EqhrcvQAbTsWXOAii";
-	const search = `https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${searchTerm}&weirdness=0`;
+	const search = `https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${searchTerm}&weirdness=9`;
 
 	const searchResult = await fetch(search, { mode: "cors" })
 		.then((response) => {
