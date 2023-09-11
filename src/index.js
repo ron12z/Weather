@@ -22,35 +22,45 @@ async function getWeatherInfo(location) {
 	const data = await API.Weather.getForecast(location);
 	const current = await data.current;
 	const forecast = await data.forecast.forecastday;
+
+	displayToday(current);
 	displayForecast(forecast);
+	displayTodayExtra(current, forecast[0]);
 }
 
 function displayToday(currentDayData) {
 	const conditionText = currentDayData.condition.text;
 	const conditionIcon = currentDayData.condition.icon; //url
-	const feelslike_c = currentDayData.feelslike_c;
-	const feelslike_f = currentDayData.feelslike_f;
 	const temp_c = currentDayData.temp_c;
 	const temp_f = currentDayData.temp_f;
 	const last_updated = currentDayData.last_updated;
 }
 
+function displayTodayExtra(currentDayData, forecastToday) {
+	const sunrise = forecastToday.astro.sunrise;
+	const sunset = forecastToday.astro.sunset;
+	const chanceOfRain = forecastToday.day.daily_chance_of_rain;
+	const willRain = forecastToday.day.daily_will_it_rain;
+	const humidity = forecastToday.day.avghumidity;
+	const feelslike_c = currentDayData.feelslike_c;
+	const feelslike_f = currentDayData.feelslike_f;
+}
+
 function displayForecast(forecastDayData) {
 	const sample = forecastDayData[0];
 
-	console.log(sample);
+	const currentTime = `${new Date()}`.split(" ")[4].split(":")[0];
+	const currentTimeVal = currentTime > 9 ? currentTime : currentTime[1];
 
 	const date = sample.date;
 	const conditionText = sample.day.condition.text;
 	const conditionIcon = sample.day.condition.icon;
-	const sunrise = sample.astro.sunrise;
-	const sunset = sample.astro.sunset;
 	const maxTemp_c = sample.day.maxtemp_c;
 	const maxTemp_f = sample.day.maxtemp_f;
 	const minTemp_c = sample.day.mintemp_c;
 	const minTemp_f = sample.day.mintemp_f;
-	const rainChance = sample.day.daily_chance_of_rain;
-	const willRain = sample.day.daily_will_it_rain;
+	const chanceOfRain = sample.day.daily_chance_of_rain;
+	const humidity = sample.day.avghumidity;
 }
 
 displayGIF();
