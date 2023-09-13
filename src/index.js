@@ -7,7 +7,7 @@ function capitalize(str) {
 }
 
 async function displayGIF() {
-	const img = document.querySelector("#currentWeather");
+	const img = document.querySelector("#currentWeatherGIF");
 
 	const forecast = await API.Weather.getForecast(loc);
 	const condition = `${await forecast.current.condition.text} Weather`;
@@ -16,6 +16,7 @@ async function displayGIF() {
 	const GIFURL = await GIF.data.images.original.url;
 
 	img.src = GIFURL;
+	img.alt = `${condition}`;
 }
 
 async function getWeatherInfo(location) {

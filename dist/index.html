@@ -8,6 +8,176 @@
 		<script defer src="./main.js"></script>
 	</head>
 	<body>
-		<img src="" alt="" id="currentWeather" />
+		<header>
+			<div class="icon">
+				<img src="" alt="" />
+				<h1 class="headerText">Weather App</h1>
+			</div>
+
+			<div class="search">
+				<input type="text" placeholder="Enter a Location" class="search" />
+			</div>
+
+			<div class="unitToggle">
+				<h3>C or F</h3>
+			</div>
+		</header>
+
+		<main>
+			<div class="current">
+				<h2 class="location"></h2>
+				<h4 class="condition"></h4>
+				<img src="" alt="" id="currentWeatherGIF" />
+				<h3 class="temp"></h3>
+				<h4 class="high-low"></h4>
+			</div>
+			<div class="hourly">
+				<h2>Hourly Forecast</h2>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<!-- extra -->
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<div class="hour-slider">
+					<h4 class="time">12:00</h4>
+					<img src="" alt="" class="condition" />
+					<h3 class="temp">25o</h3>
+				</div>
+				<!-- Extra end -->
+			</div>
+		</main>
+
+		<section class="slice">
+			<div class="sunrise">
+				<h3>SUNRISE</h3>
+				<p>6:00</p>
+			</div>
+			<div class="sunset">
+				<h3>SUNSET</h3>
+				<p>2:00</p>
+			</div>
+			<div class="chance-of-rain">
+				<h3>CHANCE OF RAIN</h3>
+				<p>55%</p>
+			</div>
+			<div class="will-rain">
+				<h3>WILL IT RAIN?</h3>
+				<p>Yes</p>
+			</div>
+			<div class="humidity">
+				<h3>HUMIDITY</h3>
+				<p>60%</p>
+			</div>
+		</section>
+
+		<section class="forecast">
+			<table class="week-forecast">
+				<tr>
+					<th>DAY</th>
+					<th>FORECAST</th>
+					<th>CHANCE OF RAIN</th>
+					<th>HUMIDITY</th>
+					<th>TEMPERATURE</th>
+				</tr>
+
+				<!-- Sample data -->
+				<tr class="forecast-data">
+					<td class="day">Monday</td>
+					<td class="forecast"><img src="" alt="" class="weather-icon" /></td>
+					<td class="chance-of-rain">66%</td>
+					<td class="humidity">45%</td>
+					<td class="temperature">25C 23C</td>
+				</tr>
+				<tr class="forecast-data">
+					<td class="day">Monday</td>
+					<td class="forecast"><img src="" alt="" class="weather-icon" /></td>
+					<td class="chance-of-rain">66%</td>
+					<td class="humidity">45%</td>
+					<td class="temperature">25C 23C</td>
+				</tr>
+				<tr class="forecast-data">
+					<td class="day">Monday</td>
+					<td class="forecast"><img src="" alt="" class="weather-icon" /></td>
+					<td class="chance-of-rain">66%</td>
+					<td class="humidity">45%</td>
+					<td class="temperature">25C 23C</td>
+				</tr>
+				<tr class="forecast-data">
+					<td class="day">Monday</td>
+					<td class="forecast"><img src="" alt="" class="weather-icon" /></td>
+					<td class="chance-of-rain">66%</td>
+					<td class="humidity">45%</td>
+					<td class="temperature">25C 23C</td>
+				</tr>
+				<tr class="forecast-data">
+					<td class="day">Monday</td>
+					<td class="forecast"><img src="" alt="" class="weather-icon" /></td>
+					<td class="chance-of-rain">66%</td>
+					<td class="humidity">45%</td>
+					<td class="temperature">25C 23C</td>
+				</tr>
+				<tr class="forecast-data">
+					<td class="day">Monday</td>
+					<td class="forecast"><img src="" alt="" class="weather-icon" /></td>
+					<td class="chance-of-rain">66%</td>
+					<td class="humidity">45%</td>
+					<td class="temperature">25C 23C</td>
+				</tr>
+				<tr class="forecast-data">
+					<td class="day">Monday</td>
+					<td class="forecast"><img src="" alt="" class="weather-icon" /></td>
+					<td class="chance-of-rain">66%</td>
+					<td class="humidity">45%</td>
+					<td class="temperature">25C 23C</td>
+				</tr>
+			</table>
+		</section>
+		<footer><p>Created by @aarontalua</p></footer>
 	</body>
 </html>

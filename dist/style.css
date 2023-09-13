@@ -2,9 +2,33 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-#currentWeather {
+#currentWeatherGIF {
 	height: 20rem;
 	aspect-ratio: 1;
+}
+
+body {
+	min-height: 100dvh;
+	min-height: 100vh;
+}
+
+header {
+	display: grid;
+	padding: 0.3rem 1rem;
+	grid-template-columns: 1fr 3fr 1fr;
+	background: lightpink;
+	align-items: center;
+}
+
+header .icon {
+	background: red;
+	display: flex;
+}
+
+header > * {
+	outline: 2px solid black;
 }
